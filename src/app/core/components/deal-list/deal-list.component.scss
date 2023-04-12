@@ -1,0 +1,34 @@
+@import "../../../../assets/scss/colors";
+
+.list-content {
+  background-color: $bgColorLight;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px 3px #49505752;
+  padding: 0.5rem 0.3rem;
+  .header {
+    margin-bottom: 2rem;
+    .title {
+      padding: 0 0.8rem;
+      margin: 0 0 0.5rem;
+      font-size: 20px;
+      font-family: 'Alkatra', cursive;
+    }
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      padding: 0 1rem;
+      .tasks,
+      .nok,
+      .alarm {
+        display: flex;
+        .pi {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+  .deals {
+    min-height: 10rem;
+  }
+}

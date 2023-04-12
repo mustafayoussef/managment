@@ -1,0 +1,55 @@
+<header>
+    <nav class="navbar">
+        <div class="navbar-first">
+            <a routerLink="/" class="logo">
+                <span class="logo-title">Nor-shipping 2019</span>
+            </a>
+            <div class="details">
+                <div class="data">
+                    <div class="statistics">
+                        <div class="one deals">
+                            <p class="title">DEALS</p>
+                            <p class="number">43</p>
+                        </div>
+                        <div class="one nok">
+                            <p class="title">TOTAL VALUE [NOK]</p>
+                            <p class="number">4.19 min</p>
+                        </div>
+                        <div class="one rate">
+                            <p class="title">HIT RATE</p>
+                            <p class="number">10%</p>
+                        </div>
+                        <div class="one won">
+                            <p class="title">DEALS WON</p>
+                            <p class="number">12/65</p>
+                        </div>
+                        <div class="one clients">
+                            <p class="title">NEW CLIENTS</p>
+                            <p class="number">8/12</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile">
+                    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" styleClass="mr-2"
+                        size="large" shape="circle"></p-avatar>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-second">
+            <ul class="links">
+                <li><a routerLink="/exhibitors" routerLinkActive="second-active"><i class="pi pi-briefcase"></i> Exhibitors</a></li>
+                <li><a routerLink="/sales" routerLinkActive="second-active"><i class="pi pi-shopping-bag"></i> Sales</a></li>
+                <li><a routerLink="/program" routerLinkActive="second-active"><i class="pi pi-folder"></i> Program</a></li>
+                <li><a routerLink="/delegates" routerLinkActive="second-active"><i class="pi pi-user"></i> Delegates</a></li>
+                <li><a routerLink="/settings" routerLinkActive="second-active"><i class="pi pi-cog"></i> Settings</a></li>
+            </ul>
+        </div>
+        <div class="navbar-sales" *ngIf="isSales">
+            <ul class="sales-links">
+                <li><a routerLink="/sales/deals" routerLinkActive="sales-active">Deals</a></li>
+                <li><a routerLink="/sales/activities" routerLinkActive="sales-active">Activities</a></li>
+                <li><a routerLink="/sales/statistics" routerLinkActive="sales-active">Statistics</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>

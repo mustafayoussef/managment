@@ -1,0 +1,25 @@
+<div class="card" *ngIf="deal">
+    <div class="header">
+        <h5 class="title">{{deal.first_name}} {{deal.last_name}}</h5>
+        <div class="options">
+            <i class="pi pi-ellipsis-h"></i>
+        </div>
+    </div>
+    <div class="status">
+        <p-tag class="state-tag" value="{{deal.state}}"></p-tag>
+        <p-tag class="probability-status" severity="primary" value="{{deal.probability_status}}"></p-tag>
+    </div>
+    <div class="contact">
+        <i class="pi pi-phone"></i>
+        <h6 class="name">{{deal.company}}</h6>
+        <p class="phone">{{deal.phone}}</p>
+    </div>
+    <div class="date-content">
+        <i class="pi pi-calendar"></i>
+        <p class="date">{{deal.date}}</p>
+    </div>
+    <div class="progress" *ngIf="probability >= '90' && currentStatus === 'Getting Ready'">
+        <p-progressBar [showValue]="false" [value]="probability" styleClass="progress-bar"
+            [style]="{ height: '6px' }"></p-progressBar>
+    </div>
+</div>

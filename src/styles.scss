@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~primeflex/primeflex.css";
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/lara-light-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import "./assets/scss/colors";
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: $darkGray;
+}
+
+.container {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,87 @@
+@import "../../../../assets/scss/colors";
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  padding: 5px 10px;
+  background-color: $white;
+  margin-bottom: .5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px 3px #49505752;
+
+  .header {
+    @extend .flex;
+
+    .title {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+  }
+
+  ::ng-deep .status {
+
+    .state-tag,
+    .probability-status {
+      .p-tag {
+        margin-right: 5px;
+        padding: 0 6.4px;
+      }
+    }
+
+    .state-tag {
+      .p-tag {
+        background: $darkGray;
+      }
+    }
+  }
+
+  .contact {
+    @extend .flex;
+    margin: 10px 0;
+
+    .name,
+    .pi-phone,
+    .phone {
+      color: $darkGray;
+      margin: 0;
+
+    }
+
+    .name {
+      font-size: 14px;
+    }
+
+    .phone {
+      width: 30%;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .date-content {
+    @extend .flex;
+    justify-content: flex-start;
+    color: $darkGray;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    .pi {
+      margin-right: 1rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  ::ng-deep .progress {
+
+    .p-progressbar .p-progressbar-value {
+      background-color: $green;
+    }
+  }
+}

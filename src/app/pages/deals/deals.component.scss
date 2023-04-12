@@ -1,0 +1,86 @@
+@import "../../../assets/scss/colors";
+
+.deal-content {
+  .top-header {
+    padding: 0 5rem;
+    margin-bottom: 2rem;
+    .grid {
+      align-items: center;
+      .search{
+        .search-btn{
+          text-align: center;
+        }
+      }
+      .btn-deal {
+        display: flex;
+        flex-direction: row-reverse;
+        ::ng-deep p-button {
+          .p-button {
+            background: $blue;
+            border-color: $blue;
+            span {
+              font-size: 15px;
+              font-weight: 500;
+            }
+            &:focus {
+              box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px $blue, 0 1px 2px 0 black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .deals {
+    padding: 0 5rem;
+    .grid {
+      .lists {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .top-header,
+    .deals {
+      padding: 0 2rem;
+      .grid {
+        .lists {
+          flex-direction: column;
+        }
+      }
+    }
+    .top-header {
+      .grid {
+        .title {
+          text-align: center;
+          font-size: 30px;
+          margin: 10px 0;
+        }
+        .search {
+          .search-btn {
+            .p-input-icon-left,
+            input {
+              width: 100%;
+            }
+          }
+        }
+        .btn-deal {
+          ::ng-deep p-button {
+            width: 100%;
+            margin-bottom: 1rem;
+            .p-button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .deals{
+      .grid{
+        justify-content: center;
+      }
+    }
+  }
+
+}

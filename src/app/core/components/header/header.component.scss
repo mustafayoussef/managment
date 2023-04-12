@@ -1,0 +1,193 @@
+@import "../../../../assets/scss/colors";
+
+header {
+  overflow: hidden;
+
+  .navbar {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    margin: 0;
+
+    &-first {
+      display: flex;
+      justify-content: space-between;
+      height: 65px;
+      border-bottom: 3px solid $bgColorLight;
+      width: 100%;
+      padding: 0.5rem 1rem;
+
+      .logo {
+        display: block;
+
+        .logo-title {
+          font-size: 2rem;
+          font-weight: 500;
+          color: #000;
+        }
+      }
+
+      .details,
+      .data,
+      .statistics {
+        height: 100%;
+      }
+
+      .details {
+        display: flex;
+
+        .data {
+          .statistics {
+            display: flex;
+
+            .one {
+              display: flex;
+              margin-right: 2rem;
+              border-left: 4px solid;
+              padding-left: 0.5rem;
+              flex-direction: column;
+              justify-content: space-around;
+
+              p {
+                margin: 0;
+              }
+
+              .title {
+                font-weight: 300;
+              }
+
+              .number {
+                font-size: 18px;
+                font-weight: 500;
+              }
+            }
+
+            .deals {
+              border-color: $pink;
+            }
+
+            .nok {
+              border-color: $fuchsiaBlue;
+            }
+
+            .rate {
+              border-color: $butterflyBlue;
+            }
+
+            .won {
+              border-color: $darkGreen;
+            }
+
+            .clients {
+              border-color: $orange;
+            }
+          }
+        }
+      }
+    }
+
+    &-second {
+      .links {
+        display: flex;
+        margin: 0;
+        list-style: none;
+        padding: 1rem;
+        margin-left: 5rem;
+
+        li {
+          display: flex;
+          justify-content: center;
+          font-family: "Righteous", cursive;
+          font-weight: 500;
+          margin-right: 15px;
+          width: 110px;
+          height: 25px;
+          font-size: 20px;
+
+          a {
+            &.second-active {
+              color: $blue;
+              border-bottom: 1px solid $blue;
+            }
+          }
+        }
+      }
+    }
+
+    &-sales {
+      background-color: $bgColorLight;
+
+      .sales-links {
+        display: flex;
+        align-items: center;
+        padding-left: 13px;
+        margin: 0 0 0 5rem;
+        list-style: none;
+        height: 50px;
+
+        li {
+          margin-right: 15px;
+          font-weight: 600;
+
+          a {
+            &.sales-active {
+              background: white;
+              padding: 10px;
+              box-shadow: 0px 0px 4px 0px #00000091;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+      &-first {
+        height: auto;
+
+        .logo {
+          .logo-title {
+            font-size: 18px;
+          }
+        }
+
+        .details {
+          flex-direction: row-reverse;
+
+          .data {
+            .statistics {
+              flex-direction: column;
+
+              .one {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &-second {
+        .links {
+          margin-left: 0;
+          flex-direction: column;
+          align-items: center;
+
+          li {
+            margin-right: 0;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 960px) {
+      &-first {
+        .logo {
+          .logo-title {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
